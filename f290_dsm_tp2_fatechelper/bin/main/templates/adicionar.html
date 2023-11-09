@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso | Criar</title>
+</head>
+<body>
+    <h1>Formulário de criação de novos cursos</h1>
+    <form action="@{/curso/criar}" method="post" th:object="${curso}">
+        <label for="nome">Nome do Curso</label>
+        <input type="text" th:field="*{nome}" id="nome">
+        <label for="descricao">Descrição do curso</label>
+        <input type="text" th:field="*{descricao}" id="descricao">
+        <input type="submit" value="Salvar">
+    </form>
+</body>
+</html>
