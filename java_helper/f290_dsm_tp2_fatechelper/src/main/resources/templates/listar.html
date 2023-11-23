@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso | Todos</title>
+</head>
+<body>
+    <h1>Cursos Disponíveis</h1>
+    <!-----Uma lista de cursos devera ser injetada pelo Controller-->
+    <ul th:each="curso : ${cursos}">
+        <li th:text="${curso.nome}"></li>
+    </ul>
+</body>
+</html>
